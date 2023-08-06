@@ -1,0 +1,27 @@
+const photoPaths = [
+            // Add all the photo file paths here
+            "memories/m (5).jpg", "memories/m (5).mp4", "memories/m (6).jpg", "memories/m (6).mp4",
+            "memories/m (7).jpg", "memories/m (7).mp4", "memories/m (8).jpg", "memories/m (8).mp4",
+            "memories/m (9).jpg", "memories/m (9).mp4", "memories/m (10).jpg", "memories/m (10).mp4",
+            "memories/m (11).jpg", "memories/m (11).mp4", "memories/m (12).jpg", "memories/m (12).mp4",
+            "memories/m (13).jpg", "memories/m (14).jpg", "memories/m (15).jpg", "memories/m (16).jpg",
+            "memories/m (17).jpg", "memories/m (18).jpg", "memories/m (19).jpg", "memories/m (20).jpg",
+            "memories/m (21).jpg", "memories/m (22).jpg", "memories/m (23).jpg", "memories/m (24).jpg",
+            "memories/m (25).jpg", "memories/m (26).jpg", "memories/m (27).jpg", "memories/m (28).jpg",
+            "memories/m (29).jpg", "memories/m (30).jpg", "memories/m (31).jpg", "memories/m (32).jpg",
+            "memories/m (33).jpg", "memories/m (34).jpg", "memories/m (35).jpg", "memories/m (36).jpg",
+            "memories/m (37).jpg", "memories/m (38).jpg", "memories/m (39).jpg", "memories/m (40).jpg",
+            "memories/m (41).jpg", "memories/m (42).jpg", "memories/m (43).jpg", "memories/m (44).jpg",
+            "memories/m (45).jpg", "memories/m (46).jpg", "memories/m (47).jpg", "memories/m (48).jpg",
+            "memories/m (49).jpg", "memories/m (50).jpg", "memories/m (51).jpg", "memories/m (52).jpg",
+            "memories/m (53).jpg", "memories/m (54).jpg", "memories/m (55).jpg", "memories/m (56).jpg",
+            "memories/m (57).jpg", "memories/m (58).jpg", "memories/m (59).jpg", "memories/m (60).jpg",
+            "memories/m (61).jpg", "memories/m (62).jpg", "memories/m (63).jpg", "memories/m (64).jpg",
+            "memories/m (65).jpg", "memories/m (66).jpg", "memories/m (67).jpg", "memories/m (68).jpg",
+            "memories/m (69).jpg", "memories/m (70).jpg", "memories/m (71).jpg", "memories/m (1).gif",
+            "memories/m (1).jpeg", "memories/m (1).jpg", "memories/m (1).mp4", "memories/m (2).gif",
+            "memories/m (2).jpeg", "memories/m (2).jpg", "memories/m (2).mp4", "memories/m (3).gif",
+            "memories/m (3).jpeg", "memories/m (3).jpg", "memories/m (3).mp4", "memories/m (4).jpg",
+            "memories/m (4).mp4"
+            //... rest of the paths
+        ];

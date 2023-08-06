@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Navy Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Congratulations on Joining IMU!</h1>
+        <audio id="congratsAudio" autoplay loop>
+            <source src="congrats.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </header>
+    <main>
+        <div class="background-image" id="imageContainer">
+            <img class="background-photo" src="adityaimu.jpg" alt="Friend's Face">
+            <img class="background-photo" src="IMUlogo.jpg" alt="IMU Logo">
+        </div>
+        <div class="buttons-container">
+            <div class="circular-button memories-btn" onclick="openMemoriesPage()">
+                Memories
+            </div>
+            <div class="circular-button start-journey-btn" onclick="openCamera()">
+                Start Journey
+            </div>
+        </div>
+        <div class="play-button" onclick="toggleAudio()">
+            <img src="play.png" alt="Play Audio">
+        </div>
+
+        <div class="timer-container">
+            <div class="countdown-timer" id="countdownTimer">
+                Time Remaining Until Joining
+            </div>
+        </div>
+        <audio id="congratsAudio" autoplay loop>
+            <source src="congrats.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </main>
+</body>
+
+</html>

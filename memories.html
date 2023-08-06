@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #slideshow-container,
+        #memoriesContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-height: 100vh;
+            overflow: auto;
+        }
+
+        .slideshow-photo {
+            max-width: 100%;
+            height: auto;
+            margin: 5px;
+        }
+
+        .slideshow-video {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: 5px;
+        }
+
+        /* Custom styling for Memories Page heading */
+        h1 {
+            text-align: center;
+            font-family: 'Impact', sans-serif;
+            font-size: 48px;
+            color: #ff3300;
+            margin: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Custom styling for Home button */
+        #home-button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            position: fixed;
+            /* Add fixed position for the home button */
+            top: 10px;
+            /* Adjust top value */
+            right: 10px;
+            /* Adjust right value */
+            z-index: 9999;
+            /* Set a high z-index to ensure it's on top of other elements */
+        }
+
+        #home-button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Memories Page</h1>
+    <button id="home-button" onclick="goToHomePage()">Home</button>
+
+    <div id="slideshow-container">
+        <!-- JavaScript code to generate the photo slideshow -->
+        <!-- The code you provided for the photo slideshow goes here -->
+    </div>
+
+    <script>
+        // JavaScript to generate the photo slideshow
+        const slideshowContainer = document.getElementById('slideshow-container');
+        const photoPaths = [
+            // Add all the photo file paths here
+            "memories/m (5).jpg", "memories/m (6).jpg",
+            "memories/m (7).jpg", "memories/m (8).jpg",
+            "memories/m (9).jpg", "memories/m (10).jpg",
+            "memories/m (11).jpg", "memories/m (12).jpg",
+            "memories/m (13).jpg", "memories/m (14).jpg", "memories/m (15).jpg", "memories/m (16).jpg",
+            "memories/m (17).jpg", "memories/m (18).jpg", "memories/m (19).jpg", "memories/m (20).jpg",
+            "memories/m (21).jpg", "memories/m (22).jpg", "memories/m (23).jpg", "memories/m (24).jpg",
+            "memories/m (25).jpg", "memories/m (26).jpg", "memories/m (27).jpg", "memories/m (28).jpg",
+            "memories/m (29).jpg", "memories/m (30).jpg", "memories/m (31).jpg", "memories/m (32).jpg",
+            "memories/m (33).jpg", "memories/m (34).jpg", "memories/m (35).jpg", "memories/m (36).jpg",
+            "memories/m (37).jpg", "memories/m (38).jpg", "memories/m (39).jpg", "memories/m (40).jpg",
+            "memories/m (41).jpg", "memories/m (42).jpg", "memories/m (43).jpg", "memories/m (44).jpg",
+            "memories/m (45).jpg", "memories/m (46).jpg", "memories/m (47).jpg", "memories/m (48).jpg",
+            "memories/m (49).jpg", "memories/m (50).jpg", "memories/m (51).jpg", "memories/m (52).jpg",
+            "memories/m (53).jpg", "memories/m (54).jpg", "memories/m (55).jpg", "memories/m (56).jpg",
+            "memories/m (57).jpg", "memories/m (58).jpg", "memories/m (59).jpg", "memories/m (60).jpg",
+            "memories/m (61).jpg", "memories/m (62).jpg", "memories/m (63).jpg", "memories/m (64).jpg",
+            "memories/m (65).jpg", "memories/m (66).jpg", "memories/m (67).jpg", "memories/m (68).jpg",
+            "memories/m (69).jpg", "memories/m (70).jpg", "memories/m (71).jpg", "memories/m (1).gif",
+            "memories/m (1).jpeg", "memories/m (1).jpg", "memories/m (2).gif",
+            "memories/m (2).jpeg", "memories/m (2).jpg", "memories/m (3).gif",
+            "memories/m (3).jpeg", "memories/m (3).jpg", "memories/m (4).jpg",
+            //... rest of the paths
+        ];
+
+        // Function to shuffle the array of photo paths
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Shuffle the photo paths
+        shuffle(photoPaths);
+
+        // Generate the HTML code for the photo slideshow
+        let slideshowHTML = '';
+        for (let i = 0; i < photoPaths.length; i++) {
+            slideshowHTML += `<img class="slideshow-photo" src="${photoPaths[i]}" alt="Memory ${i + 1}">`;
+        }
+
+        // Add the generated HTML code to the slideshow container
+        slideshowContainer.innerHTML = slideshowHTML;
+
+        let currentPhotoIndex = 0;
+
+        function showNextPhoto() {
+            const photos = slideshowContainer.querySelectorAll('.slideshow-photo');
+            photos[currentPhotoIndex].style.display = 'none';
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            photos[currentPhotoIndex].style.display = 'block';
+        }
+
+        // Show the first photo initially
+        const photos = slideshowContainer.querySelectorAll('.slideshow-photo');
+        photos[currentPhotoIndex].style.display = 'block';
+
+        // Change photo every 5 seconds
+        setInterval(showNextPhoto, 5000);
+
+        // Function to go back to the index.html page
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfie Camera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="camera-container">
+        <video id="cameraStream" width="640" height="480" autoplay></video>
+        <button id="shutterButton" onclick="takePhoto()">Take Photo</button>
+    </div>
+    <script src="selfie.js"></script>
+    <script>
+        // Function to open the camera stream when the page loads
+        window.addEventListener('load', () => {
+            const constraints = {
+                video: true,
+            };
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(function (stream) {
+                    const video = document.getElementById('cameraStream');
+                    video.srcObject = stream;
+                    video.autoplay = true;
+                })
+                .catch(function (error) {
+                    console.error('Error accessing the camera:', error);
+                    alert('Failed to access the camera. Please make sure it is enabled and try again.');
+                });
+        });
+    </script>
+</body>
+
+</html>
